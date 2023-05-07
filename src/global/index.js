@@ -1,21 +1,17 @@
-function addResModeAttribute(settings, name) {
-	console.log(settings);
-	// Add the `resMode` attribute to all blocks under the `bdt-blocks` category
-	if (name.startsWith('bdt/')) {
-		settings.attributes = {
-			...settings.attributes,
-			resMode: {
-				type: 'string',
-				default: 'default',
-			},
-		};
-	}
-
-	return settings;
-}
-
+// add resMode attributes to all blocks
 wp.hooks.addFilter(
 	'blocks.registerBlockType',
-	'my-plugin/add-resMode-attribute',
-	addResModeAttribute
+	'bdt/attribute/resMode',
+	function (settings, name) {
+		if (name.includes('bdt/')) {
+			settings.attributes = {
+				...settings.attributes,
+				resMode: {
+					type: 'string',
+					default: 'Desktop',
+				},
+			};
+		}
+		return settings;
+	}
 );

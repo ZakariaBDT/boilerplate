@@ -37,16 +37,8 @@ export default function Edit({ attributes, setAttributes, clientId }) {
 			color: ${descriptionColor};
 		}
 	`;
-	const tabStyles = `
-		.${uniqueId} .bdt-title {
-			color: red;
-		}
-	`;
-	const mobStyles = `
-		.${uniqueId} .bdt-title {
-			color: green;
-		}
-	`;
+	const tabStyles = ``;
+	const mobStyles = ``;
 
 	/**
 	 * Block All Styles

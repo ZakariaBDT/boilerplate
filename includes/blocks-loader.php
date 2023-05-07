@@ -32,6 +32,9 @@ class BDT_BLOCKS_LOADER {
 
         // enqueue editor assets
         add_action( 'enqueue_block_editor_assets', [ $this, 'enqueue_editor_assets' ] );
+
+        // enqueue assets for frontend
+        add_action( 'enqueue_block_assets', [ $this, 'enqueue_assets' ] );
     }
 
     /**
@@ -45,6 +48,16 @@ class BDT_BLOCKS_LOADER {
             BDT_VERSION,
             true
         );
+    }
+
+    /**
+     * Enqueue Assets
+     */
+    public function enqueue_assets(){
+        if( ! is_admin() ){
+            wp_enqueue_script( 'bdt-blocks-frontend', BDT_ADMIN_URL . './includes/assets/js/plugin.js', [], BDT_VERSION, true);
+        }
+        
     }
 
     /**
