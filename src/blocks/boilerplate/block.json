@@ -1,0 +1,16 @@
+{
+	"apiVersion": 2,
+	"name": "bdt/boilerplate",
+	"version": "0.1.0",
+	"title": "Bootstrap Block",
+	"category": "bdt-blocks",
+	"description": "Simple bootstrap block description.",
+	"supports": {
+		"html": false,
+		"anchor": true
+	},
+	"textdomain": "bdt-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

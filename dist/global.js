@@ -1,0 +1,1 @@
+wp.hooks.addFilter("blocks.registerBlockType","my-plugin/add-resMode-attribute",(function(t,e){return console.log(t),e.startsWith("bdt/")&&(t.attributes={...t.attributes,resMode:{type:"string",default:"default"}}),t}));
