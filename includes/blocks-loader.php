@@ -50,6 +50,15 @@ class BDT_BLOCKS_LOADER {
             BDT_VERSION,
             true
         );
+
+        wp_enqueue_script(
+            'bdt-blocks-modules-js',
+            BDT_ADMIN_URL . './modules/index.js',
+            array('wp-block-editor', 'wp-blocks', 'wp-components', 'wp-data', 'wp-element', 'wp-i18n'),
+            BDT_VERSION,
+            true
+        );
+
     }
 
     /**

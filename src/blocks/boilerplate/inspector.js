@@ -16,6 +16,9 @@ const { GRID_COLUMNS } = Constants;
 
 import objAttributes from './attributes';
 
+// import colorcontrol
+// import ColorControl from '../../controls/color-control';
+
 const Inspector = ({ attributes, setAttributes }) => {
 	const { titleColor, descriptionColor } = attributes;
 	const objAttrs = { attributes, setAttributes, objAttributes };
@@ -23,6 +26,12 @@ const Inspector = ({ attributes, setAttributes }) => {
 	return (
 		<div className="bdt-inspector-controls">
 			<InspectorControls>
+				{/* <ColorControl
+					label={__('Title Color', 'bdt-blocks')}
+					color={titleColor}
+					attrName="titleColor"
+					setAttributes={setAttributes}
+				/> */}
 				<PanelBody title={__('Column Settings', 'bdt-blocks')}>
 					<ResRangleControl
 						label={__('Grid Columns', 'bdt-blocks')}

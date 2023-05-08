@@ -13,6 +13,8 @@ import './editor.scss';
 import Inspector from './inspector';
 import { softMinifyCssStrings } from '../../helper/softminify';
 
+const { ColorControl } = window.BDTBlocks;
+
 export default function Edit({ attributes, setAttributes, clientId }) {
 	const {
 		uniqueId,
